@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 3. tạo giao diện gồm ô input và nút button (save)
+        khi người dùng nhập nội dung vào ô input nhấn (save) sẽ lưu vào 1 cái mảng */-->
+
+    <input type="text" placeholder="Hãy nhập dữ liệu">
+    <button onclick="saveData()">Save</button>
+    <script>
+        let arr = [];
+
+        function saveData() {
+            let text = document.querySelector("input");
+            let value = text.value;
+            if (value != "") {
+                arr.push(value);
+                text.value = ""; 
+            }
+            console.log(arr);
+        }
+    </script>
+</body>
+
+</html>

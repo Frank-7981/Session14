@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .header{
+        width: 500px;
+        height: 500px;
+    }
+
+</style>
+
+<body>
+    <!-- 1. tạo  1 div chứa 1 cái ảnh khi click vào ảnh đó sẽ thay đổi thành
+        ảnh khác. -->
+    <div class="header">
+        <img id = "image" onclick="change()" src="./img/anh1.jpg" alt="Loadding">
+    </div>
+    <script>
+        let images = ['./img/anh1.jpg', './img/anh2.jpg', './img/anh3.jpg'];
+        let count = 0;
+        function change(params) {
+            count++;
+            console.log(count);
+            if (count==3) {
+                count = 0;
+            }
+            document.getElementById("image").src = images[count];
+        }
+
+    </script>
+</body>
+
+</html>

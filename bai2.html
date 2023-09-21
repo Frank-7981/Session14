@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        2. tạo 1 button( click ) khi click vào sẽ hiện ra 1 div trong div
+        có icon (X) khi nhấn icon X đóng div lại.
+     -->
+     <style>
+        .box {
+            width: 20px;
+            height: 20px;
+            display: none;
+            border: 1px solid black;
+        }
+    </style>
+    
+    <body>
+        <button onclick="change1()">nhap vao</button>
+        <div class="box" id="box">
+            <span onclick="change2()" id=" close">
+                X
+            </span>
+            <!-- tạo icon class="material-symbols-outlined" -->
+        </div>
+        <script>
+            function change1() {
+                document.getElementById('box').style.display = "block";
+                
+            }
+            function change2() {
+                document.getElementById('box').style.display = "none";
+                
+            }
+    
+        </script>
+</body>
+</html>
